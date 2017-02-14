@@ -1,7 +1,16 @@
 AWSTemplateFormatVersion: '2010-09-09'
 Description: Alexa Rain Drop 1.0.0
 
+Parameters:
+  S3BucketName:
+    Type: String
+    Description: S3 bucket name
+
 Resources:
+  S3Bucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: !Ref S3BucketName
   AlexaRainDropIamRole:
     Type: AWS::IAM::Role
     Properties:
@@ -24,6 +33,18 @@ Resources:
             Action:
             - logs:*
             Resource: arn:aws:logs:*:*:*
+          - Effect: Allow
+            Action:
+            - s3:Get*
+            - s3:List*
+            Resource:
+              Fn::Join: 
+                - ""
+                - 
+                  - "arn:aws:s3:::"
+                  - 
+                    Ref: "S3BucketName"
+                  - "/*"
 
   AlexaRainDropLambdaFunction:
     Type: "AWS::Lambda::Function"
