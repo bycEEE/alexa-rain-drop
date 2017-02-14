@@ -7,7 +7,7 @@ Parameters:
     Description: S3 bucket name
 
 Resources:
-  S3Bucket:
+  AlexaRainDropS3Bucket:
     Type: AWS::S3::Bucket
     Properties:
       BucketName: !Ref S3BucketName
@@ -47,9 +47,15 @@ Resources:
                   - "/*"
 
 Outputs:
-  S3BucketName:
+  AlexaRainDropS3BucketName:
     Description: Alexa Rain Drop S3 Bucket Name
     Value:
-      !Ref S3Bucket
+      !Ref AlexaRainDropS3Bucket
     Export:
-      Name: S3Bucket
+      Name: AlexaRainDropS3Bucket
+  AlexaRainDropIamRoleArn:
+    Description: Alexa Rain Drop IAM role ARN
+    Value:
+      !GetAtt AlexaRainDropIamRole.Arn
+    Export:
+      Name: AlexaRainDropIamRoleArn

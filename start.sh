@@ -11,11 +11,12 @@ aws cloudformation create-stack \
 	--parameters ParameterKey=S3BucketName,ParameterValue=$BUCKET_NAME
 
 # Wait until setup stack is created
+echo Waiting for CloudFormation stack to finish creating
 aws cloudformation wait stack-create-complete --stack-name AlexaRainDropSetup
 
 # Remove existing archives and create new ones
 rm -rf $RAIN_DROP_FILE $BAD_BOUJEE_FILE
-zip -9 $RAIN_DROP_FILE src/raindrop.py
+zip -9j $RAIN_DROP_FILE src/raindrop.py
 #zip -9 $BAD_BOUJEE_FILE src/badboujee.py
 
 # Upload files to s3
