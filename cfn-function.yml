@@ -15,13 +15,34 @@ Resources:
       Runtime: python2.7
       Timeout: 3
 
-  AlexaSkillFunctionPermissions:
+  AlexaBadBoujeeLambdaFunction:
+    Type: "AWS::Lambda::Function"
+    Properties:
+      Code:
+        S3Bucket: !ImportValue AlexaRainDropS3Bucket
+        S3Key: badboujee.zip
+      Description: Alexa Bad Boujee Function
+      FunctionName: AlexaBadBoujee
+      Handler: badboujee.lambda_handler
+      Role: !ImportValue AlexaRainDropIamRoleArn
+      Runtime: python2.7
+      Timeout: 3
+
+  RainDropSkillFunctionPermissions:
     Type: AWS::Lambda::Permission
     Properties:
       FunctionName: AlexaRainDrop
       Action: lambda:InvokeFunction
       Principal: alexa-appkit.amazon.com
     DependsOn: AlexaRainDropLambdaFunction
+
+  BadBoujeeSkillFunctionPermissions:
+    Type: AWS::Lambda::Permission
+    Properties:
+      FunctionName: AlexaBadBoujee
+      Action: lambda:InvokeFunction
+      Principal: alexa-appkit.amazon.com
+    DependsOn: AlexaBadBoujeeLambdaFunction
 
 Outputs:
   AlexaRainDropFunctionArn:
@@ -30,3 +51,9 @@ Outputs:
       !GetAtt AlexaRainDropLambdaFunction.Arn
     Export:
       Name: AlexaRainDropFunctionName
+  AlexaBadBoujeeFunctionArn:
+    Description: Alexa BadBoujee Function Arn
+    Value:
+      !GetAtt AlexaBadBoujeeLambdaFunction.Arn
+    Export:
+      Name: AlexaBadBoujeeFunctionName
