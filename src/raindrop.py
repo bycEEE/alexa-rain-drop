@@ -33,8 +33,8 @@ def say_rain_drop_lyrics():
     session_attributes = {}
     speech_output = "Drop top. " \
                     "Smoking on cookie in the hot box, " \
-                    "<phoneme alphabet='ipa' ph='ˈfʌkɪŋ'>forking</phoneme> on your <phoneme alphabet='ipa' ph='ˈbɪtʃ'>beech</phoneme> she a thot thot thot" \
-                    "<break time='1s'/> Cooking up dope in the crock pot pot"
+                    "<phoneme alphabet='ipa' ph='ˈfʌkɪŋ'>forking</phoneme> on your <phoneme alphabet='ipa' ph='ˈbɪtʃ'>beech</phoneme> she a thot thot thot," \
+                    "Cooking up dope in the crock pot pot"
 
     should_end_session = True
     return build_response(session_attributes, build_ssml_response(
