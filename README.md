@@ -1,7 +1,7 @@
 # Alexa Rain Drop
 
 ## Purpose:
-Upon saying `[trigger word] rain drop`, the Amazon Echo will reply with `drop top`.
+Upon saying `[trigger word] rain drop`, the Amazon Echo will reply with `drop top`. Additionally upon asking her `are you bad and boujee`, she will recite additional lyrics from the song.
 
 ## How to Run:
 1. Replace `BUCKET_NAME` in `config.env` with a unique bucket name.
