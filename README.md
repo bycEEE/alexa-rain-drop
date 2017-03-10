@@ -17,8 +17,8 @@ Upon saying "[trigger word] rain drop", the Amazon Echo will reply with "drop to
     ./start.sh
     ```
 
-4. Create a new Alexa Skill: [https://developer.amazon.com/edw/home.html](https://developer.amazon.com/edw/home.html)
-5. Click 'Add a New Skill'
+4. Create a new Alexa Skill: [https://developer.amazon.com/edw/home.html](https://developer.amazon.com/edw/home.html).
+5. Click 'Add a New Skill'.
 6. Add "Rain Drop" as the name and invocation name.
     ![](https://i.imgur.com/Ul8yz2G.png)
 7. Create a basic intent schema and sample utterances. Since we don't need to say anything past "rain drop", we don't have to fill in any meaningful information.
