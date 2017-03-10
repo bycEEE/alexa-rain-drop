@@ -5,7 +5,7 @@ Upon saying "[trigger word] rain drop", the Amazon Echo will reply with "drop to
 
 ## How to Run:
 1. Replace `BUCKET_NAME` in `config.env` with a unique bucket name.
-2. Source `config.env`
+2. Source `config.env`:
 
     ```
     source config.env
