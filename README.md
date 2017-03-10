@@ -6,7 +6,8 @@ Upon saying `[trigger word] rain drop`, the Amazon Echo will reply with `drop to
 ## Prerequisites:
 1. Install AWS CLI: [http://docs.aws.amazon.com/cli/latest/userguide/installing.html](http://docs.aws.amazon.com/cli/latest/userguide/installing.html).
 2. Create an access key: [http://docs.aws.amazon.com/cli/latest/userguide/installing.html](https://aws.amazon.com/developers/access-keys/).
-3. Fill in `~/.aws/credentials`.
+3. (To do: Add permissions info).
+4. Fill in `~/.aws/credentials`.
 
     ```
     [default]
