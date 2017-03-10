@@ -3,6 +3,8 @@
 ## Purpose:
 Upon saying `[trigger word] rain drop`, the Amazon Echo will reply with `drop top`. Additionally upon asking her `are you bad and boujee`, she will recite additional lyrics from the song.
 
+[![](https://i.imgur.com/bghWvaH.jpg)](https://streamable.com/7i348#)
+
 ## Prerequisites:
 1. Install AWS CLI: [http://docs.aws.amazon.com/cli/latest/userguide/installing.html](http://docs.aws.amazon.com/cli/latest/userguide/installing.html).
 2. Create an access key: [http://docs.aws.amazon.com/cli/latest/userguide/installing.html](https://aws.amazon.com/developers/access-keys/).
