@@ -9,10 +9,10 @@ Upon saying `[trigger word] rain drop`, the Amazon Echo will reply with `drop to
 3. Fill in `~/.aws/credentials`.
 
     ```
-        [default]
-        region = us-east-1
-        aws_access_key_id = 
-        aws_secret_access_key = 
+    [default]
+    region = us-east-1
+    aws_access_key_id = 
+    aws_secret_access_key = 
     ```
 
 ## How to Run:
