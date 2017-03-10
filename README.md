@@ -6,13 +6,17 @@ Upon saying "[trigger word] rain drop", the Amazon Echo will reply with "drop to
 ## How to Run:
 1. Replace `BUCKET_NAME` in `config.env` with a unique bucket name.
 2. Source `config.env`
+
     ```
     source config.env
     ```
+
 3. Run the create script:
+
     ```
     ./start.sh
     ```
+
 4. Create a new Alexa Skill: [https://developer.amazon.com/edw/home.html](https://developer.amazon.com/edw/home.html)
 5. Click 'Add a New Skill'
 6. Add "Rain Drop" as the name and invocation name.
