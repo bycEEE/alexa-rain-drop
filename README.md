@@ -14,10 +14,6 @@ Upon saying `[trigger word] rain drop`, the Amazon Echo will reply with `drop to
 4. Create `~/.aws/credentials` if it does not exist and fill in the access key and secret.
 
     ```
-    mkdir -p ~/.aws/credentials
-    ```
-
-    ```
     [default]
     region = us-east-1
     aws_access_key_id = 
