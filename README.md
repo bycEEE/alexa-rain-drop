@@ -11,7 +11,11 @@ Upon saying `[trigger word] rain drop`, the Amazon Echo will reply with `drop to
 3. `AdministratorAccess` permissions can be used to ensure no permissions issues occur. If the user does not plan to continue using AWS, *the access key can and should be revoked/deleted immediately after the last step* in case the key gets compromised.
 
     (To do: Replace this step with more granular permissions).
-4. Fill in `~/.aws/credentials`.
+4. Create `~/.aws/credentials` if it does not exist and fill in the access key and secret.
+
+    ```
+    mkdir -p ~/.aws/credentials
+    ```
 
     ```
     [default]
