@@ -52,7 +52,12 @@ Upon saying `[trigger word] rain drop`, the Amazon Echo will reply with `drop to
 7. Create another skill with `Bad and Boujee` as the name and `are you bad and boujee` as the invocation name.
     ![](https://i.imgur.com/N1S9jvV.png)
 8. Use the same intent as the previous `Rain Drop` skill.
-9. Select `AWS Lambda ARN (Amazon Resource Name)` and `North America`. Enter the ARN of your Lambda stack: `aws cloudformation describe-stacks --stack-name AlexaRainDropFunctions`.
+9. Select `AWS Lambda ARN (Amazon Resource Name)` and `North America`. Enter the ARN of your Lambda stack, which can be found from the output of:
+
+    ```
+    aws cloudformation describe-stacks --stack-name AlexaRainDropFunctions
+    ```
+
 10. All set!
 
 Note to self: Add error handling to start script.
